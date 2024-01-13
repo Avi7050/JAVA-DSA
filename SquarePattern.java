@@ -51,7 +51,21 @@ class SquarePattern {
             System.out.println();
         }
     }
-
+         public static void pattern6(int n) {
+        char ch = 'A';
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if(i == 0 || j == 0 || i == (n - 1) || j == (n - 1)) {
+                    System.out.print(ch + " ");
+                }else{
+                    System.out.print("  ");
+                }
+                ch++;
+            }
+            
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Printing *");
         pattern1(5);
@@ -63,5 +77,7 @@ class SquarePattern {
         pattern4(6);
         System.out.println("Printing Hollow Square");
         pattern5(5);
+        System.out.println("Printing Hollow Square using Alphabet");
+        pattern6(5);
     }
 }
